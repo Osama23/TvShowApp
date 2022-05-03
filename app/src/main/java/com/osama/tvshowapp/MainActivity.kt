@@ -2,6 +2,7 @@ package com.osama.tvshowapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.osama.tvshowapp.adapter.TvShowAdapter
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.hide()
+
+        binding.avi.show()
+        binding.linearLayout.visibility = View.GONE
+        binding.linearLayout2.visibility = View.GONE
+        binding.linearLayout3.visibility = View.GONE
 
         setUpRv()
 
@@ -66,6 +72,10 @@ class MainActivity : AppCompatActivity() {
         viewModel.responseTvShow.observe(this, { listTvShows ->
 
             tvShowAdapter.tvShows = listTvShows
+            binding.avi.hide()
+            binding.linearLayout.visibility = View.VISIBLE
+            binding.linearLayout2.visibility = View.VISIBLE
+            binding.linearLayout3.visibility = View.VISIBLE
 
         })
 

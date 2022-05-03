@@ -86,6 +86,26 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
 
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            style="@style/AVLoadingIndicatorView.Small"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            app:indicatorColor="@color/white"
+            app:indicatorName="LineScaleIndicator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            app:layout_constraintGuide_percent=".5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
